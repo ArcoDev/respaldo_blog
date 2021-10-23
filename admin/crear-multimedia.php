@@ -1,5 +1,5 @@
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregando los templates de la plantilla */
   include_once "functions/sesiones.php";
   include_once "functions/funciones.php";
   include_once "templates/header.php";
@@ -13,7 +13,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Multimedia inedito
+      Blog inédito
     </h1>
   </section>
 
@@ -24,21 +24,25 @@
         <!-- Default box -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Guardar Categoria</h3>
+            <h3 class="box-title">Guardar Url de la multimedia</h3>
           </div>
           <div class="box-body">
             <!-- form start -->
-            <form role="form" name="guardar-galeria" id="guardar-galeria" method="post" action="modelo-galeria.php"
-              enctype="multipart/form-data">
+            <form role="form" name="guardar-multimedia" id="guardar-multimedia-archivo" method="post"
+              action="modelo-multimedia.php" enctype="multipart/form-data">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="url">URL del video de youtube</label>
-                  <input autocomplete="off" type="text" class="form-control" id="url" name="url"
-                    placeholder="Ingresa la url del video">
+                  <label for="url">URL del video</label>
+                  <input type="text" class="form-control" id="url" name="url"
+                    placeholder="Ingresa la url de la multimedia">
+                </div>
+                <div id="loader" class="form-group" style="display: none;">
+                  <img src="../images/loading.gif" alt="Cargando" style="margin: 10px 0 10px 20px;">
+                  <p>Espere un momento porfavor, se esta cargando la imagen...</p>
                 </div>
                 <div class="box-footer">
                   <input type="hidden" name="registro" value="nuevo">
-                  <button type="submit" class="btn btn-primary">Agregar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
           </div>
@@ -53,7 +57,7 @@
 <!-- /.content-wrapper -->
 
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregando los templates de la plantilla */
   include_once "templates/footer.php";
 
 ?>

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    /* Crear un usuario y mandar info a la BD */
     $('#guardar-categoria-archivo').on('submit', function (e) {
         e.preventDefault();
 

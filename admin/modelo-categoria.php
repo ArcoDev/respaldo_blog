@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-/* Crear blog y mandar ifo a la BD */
 include_once "functions/funciones.php";
 $categoria = $_POST['categoria'];
 $id_registroEditar = $_POST["id_registro"];
