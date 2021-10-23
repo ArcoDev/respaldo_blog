@@ -1,6 +1,6 @@
 $(document).ready(function () {
     /* Crear un usuario y mandar info a la BD */
-    $('#guardar-proyecto-archivo').on('submit', function (e) {
+    $('#guardar-categoria-archivo').on('submit', function (e) {
         e.preventDefault();
 
         var datos = new FormData(this);
@@ -21,22 +21,22 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta === 'exito') {
                     swal(
-                        'El proyecto!',
+                        'La categoría!',
                         'Se agrego correctamente.',
                         'success'
                     );
                     $('#loader').hide();
-                    $('#guardar-proyecto-archivo')[0].reset();
+                    $('#guardar-categoria-archivo')[0].reset();
                 } else {
                     swal(
                         'Ooops!',
-                        'No se puede cargar el producto',
+                        'No se puede cargar la categoría',
                         'error'
                     );
                 }
                 if (resultado.respuesta === 'actualizar') {
                     swal(
-                        'El Proyecto!',
+                        'La categoría!',
                         'Se edito correctamente.',
                         'success'
                     );
@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('.borrar_registro').on('click', function (e) {
         e.preventDefault();
         var id = $(this).attr('data-id');
-        var proyecto = $(this).attr('data-tipo');
+        var categoria = $(this).attr('data-tipo');
         swal({
             title: 'Estas seguro?',
             text: "Esta acción no se puede revertir!",
@@ -60,22 +60,16 @@ $(document).ready(function () {
             cancelButtonText: 'Cancelar'
 
         }).then(function (result) {
-            //console.log(result);
             if (result.value) {
-                //console.log("ID:" + id);
-
                 $.ajax({
                     type: 'post',
                     data: {
-                        'id': id,
+                        'id_cat': id,
                         'registro': 'eliminar'
                     },
-
-                    url: 'modelo-' + proyecto + '.php',
+                    url: 'modelo-' + categoria + '.php',
                     success: function (data) {
-                        //  console.log(data);
                         var resultado = JSON.parse(data);
-                        console.log(resultado);
                         if (resultado.respuesta == 'exito') {
                             swal(
                                 'Eliminado!',

@@ -1,5 +1,5 @@
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregando los templates de la plantilla */
   include_once "functions/sesiones.php";
   include_once "functions/funciones.php";
   $id = $_GET['id'];
@@ -43,7 +43,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="autor">Autor</label>
-                  <input autocomplete="off" type="text" class="form-control" id="autor" name="autor"
+                  <input type="text" class="form-control" id="autor" name="autor"
                     placeholder="Ingresa el nombre del autor" value="<?= $blog['autor'] ?>">
                 </div>
                 <div class="form-group">
@@ -58,16 +58,16 @@
                 </div>
                 <div class="form-group">
                   <label for="fecha">Fecha de creación</label>
-                  <input autocomplete="off" type="date" class="form-control" id="fecha" name="fecha">
+                  <input type="date" class="form-control" id="fecha" name="fecha">
                 </div>
                 <div class="form-group">
                   <label for="titulo">Titulo del blog</label>
-                  <input autocomplete="off" type="text" class="form-control" id="titulo" name="titulo"
+                  <input type="text" class="form-control" id="titulo" name="titulo"
                     placeholder="Ingresa el titulo del blog" value="<?= $blog['titulo'] ?>">
                 </div>
                 <div class="form-group">
                   <label for="contenido">Contenido</label>
-                  <input autocomplete="off" type="text" class="form-control" id="contenido" name="contenido"
+                  <input type="text" class="form-control" id="contenido" name="contenido"
                     placeholder="Ingresa el contenido del blog" value="<?= $blog['contenido'] ?>">
                 </div>
                 <!-- select -->
@@ -130,7 +130,6 @@
 <!-- /.content-wrapper -->
 
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregando los templates de la plantilla */
   include_once "templates/footer.php";
-
 ?>

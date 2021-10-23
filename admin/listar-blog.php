@@ -1,5 +1,5 @@
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregando los templates de la plantilla */
   include_once "functions/sesiones.php";
   include_once "functions/funciones.php";
   include_once "templates/header.php";
@@ -14,7 +14,7 @@
   <section class="content-header">
     <h1>
       Lista de proyectos
-      <small>registrados en la base de datos de VSI</small>
+      <small>registrados en la base de datos de inedito</small>
     </h1>
   </section>
 
@@ -110,7 +110,6 @@
 <!-- /.content-wrapper -->
 
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregando los templates de la plantilla */
   include_once "templates/footer.php";
-
 ?>
