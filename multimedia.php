@@ -106,80 +106,25 @@
     <!-- end header -->
 
     <div class="container-fluid my-5">
-        <!-- Filter -->
-        <div class="filter">
-            <?php 
-                try {
-                    // Consulta sql 
-                    $sql = "SELECT * FROM categorias";
-                    $res = $con->query($sql);
-                } catch (\Throwable $th) {
-                    $error = $e->getMessage();
-                      echo $error;
-                }
-                while ($categorias = $res->fetch_assoc()) {?>
-                    <a href=""><?= $categorias['nombre'] ?></a>
-            <?php } ?>
-        </div>
-        <!-- Blog -->
+        <h4 class="text-center text-multi">Multimedia</h4>
         <div class="container-blog">
             <?php 
                 try {
                     // Consulta sql 
-                    $sql = "SELECT * FROM blog";
+                    $sql = "SELECT * FROM multimedia";
                     $res = $con->query($sql);
                 } catch (\Throwable $th) {
                     $error = $e->getMessage();
                       echo $error;
                 }
-                while ($blog = $res->fetch_assoc()) {?>
+                while ($multimedia = $res->fetch_assoc()) {?>
                     <div class="box-blog">
-                        <img loading="lazy" src="images/blog/<?= $blog['img_blog'] ?>" alt="Test">
-                        <h2 class="mt-3"><?= $blog['titulo'] ?></h2>
-                        <a rel="norefeer" data-toggle="modal" data-target="#<?= $blog['id']?>">Leer Más</a>
+                        <iframe src="<?= $multimedia['url']?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
                     </div>
             <?php } ?>
         </div> 
     </div>
-    <?php 
-        try {
-            // Consulta sql 
-            $sql = "SELECT id, img_autor, autor, titulo, contenido, img_blog, DATE_FORMAT(fecha, '%d-%m-%Y') as fecha FROM blog";
-            $res = $con->query($sql);
-        } catch (\Throwable $th) {
-            $error = $e->getMessage();
-                echo $error;
-        }
-        while ($blog = $res->fetch_assoc()) {?>
-            <!-- Modal Blog -->
-            <div class="modal fade" id="<?= $blog['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="autor">
-                                <img loading ="lazy" src="images/autor/<?= $blog['img_autor']?>" alt="">
-                                <div class="text-autor">
-                                    <span>Por: <?= $blog['autor']?></span>
-                                    <span><b><?= $blog['fecha']?></b></span>
-                                </div>
-                            </div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="images/blog/<?= $blog['img_blog']?>" alt="">
-                            <div class="content-blog">
-                                <h2 class="text-center"><?= $blog['titulo']?></h2>
-                                <p><?= $blog['contenido']?></p>
-                            </div>
-                        </div>
-                        <!-- <div class="modal-footer">
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-    <?php } ?>
-    
 
     <!--  footer -->
     <footer id="footer" class="footer-1">

@@ -119,6 +119,17 @@ body {
   border: 1px solid #4bc714;
 }
 
+.container-blog .box-blog iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.text-multi {
+  font-size: 2rem;
+  color: #163f03;
+  padding: 2rem 0;
+}
+
 @media screen and (max-width: 767px) {
   .modal {
     padding-right: 0 !important;
@@ -144,7 +155,7 @@ body {
 }
 
 .text-autor {
-  width: 105%;
+  width: 140%;
   padding-top: 0.7rem;
 }
 

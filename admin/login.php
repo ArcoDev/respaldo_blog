@@ -11,7 +11,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index.html"><b>VSI</b> Desarrollos</a>
+            <a href="../../index.html"><b>INEDITO</b></a><br>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
