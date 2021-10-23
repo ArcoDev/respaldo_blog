@@ -37,6 +37,11 @@ body {
   color: #163f03;
   -webkit-transition: .4s ease-out;
   transition: .4s ease-out;
+  cursor: pointer;
+}
+
+.filter a.active {
+  color: #4bc714;
 }
 
 @media screen and (max-width: 767px) {
@@ -47,10 +52,6 @@ body {
     width: 45%;
     font-size: 1rem;
   }
-}
-
-.filter a:hover {
-  color: #4bc714;
 }
 
 .container-blog {
@@ -73,6 +74,12 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
+  display: none;
+}
+
+.container-blog .box-blog.mostrar-blog {
+  display: -ms-grid;
+  display: grid;
 }
 
 @media screen and (max-width: 767px) {
@@ -101,7 +108,7 @@ body {
           transform: scale(1.08);
 }
 
-.container-blog .box-blog a {
+.container-blog .box-blog button {
   width: 50%;
   padding: 1rem 0;
   border: 1px solid #163f03;
@@ -114,7 +121,7 @@ body {
   cursor: pointer;
 }
 
-.container-blog .box-blog a:hover {
+.container-blog .box-blog button:hover {
   background: #4bc714;
   border: 1px solid #4bc714;
 }

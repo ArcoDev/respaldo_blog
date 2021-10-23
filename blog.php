@@ -118,7 +118,7 @@
                       echo $error;
                 }
                 while ($categorias = $res->fetch_assoc()) {?>
-                    <a href=""><?= $categorias['nombre'] ?></a>
+                    <a class="enlaces" data-blog="<?= $categorias['id_cat'] ?>"><?= $categorias['nombre'] ?></a>
             <?php } ?>
         </div>
         <!-- Blog -->
@@ -133,10 +133,10 @@
                       echo $error;
                 }
                 while ($blog = $res->fetch_assoc()) {?>
-                    <div class="box-blog">
+                    <div id="blog-<?= $blog['categoria'] ?>" class="box-blog">
                         <img loading="lazy" src="images/blog/<?= $blog['img_blog'] ?>" alt="Test">
                         <h2 class="mt-3"><?= $blog['titulo'] ?></h2>
-                        <a rel="norefeer" data-toggle="modal" data-target="#<?= $blog['id']?>">Leer Más</a>
+                        <button rel="norefeer" data-toggle="modal" data-target="#<?= $blog['id']?>">Leer Más</button>
                     </div>
             <?php } ?>
         </div> 
@@ -233,6 +233,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/plugin.js"></script>
+    <script src="js/filtro-blog.js"></script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
