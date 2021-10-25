@@ -133,7 +133,7 @@
                       echo $error;
                 }
                 while ($blog = $res->fetch_assoc()) {?>
-                    <div id="blog-<?= $blog['categoria'] ?>" class="box-blog">
+                    <div class="box-blog numero-<?= $blog['categoria']; ?>">
                         <img loading="lazy" src="images/blog/<?= $blog['img_blog'] ?>" alt="Test">
                         <h2 class="mt-3"><?= $blog['titulo'] ?></h2>
                         <button rel="norefeer" data-toggle="modal" data-target="#<?= $blog['id']?>">Leer Más</button>

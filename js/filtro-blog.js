@@ -10,8 +10,7 @@ function mostrarBlog() {
     if (blogAnterior) {
         blogAnterior.classList.remove('mostrar-blog');
     }
-    const blogActual = document.querySelector(`#blog-${blog}`);
-    blogActual.classList.add('mostrar-blog');
+    claseBlog();
 
     const enlaceAnterior = document.querySelector('.active');
     if (enlaceAnterior) {
@@ -19,6 +18,13 @@ function mostrarBlog() {
     }
     const enlaceActual = document.querySelector(`[data-blog="${blog}"]`);
     enlaceActual.classList.add('active');
+}
+
+function claseBlog() {
+    const claseB = document.querySelectorAll(`.numero-${blog}`);
+    claseB.forEach(blogActual => {
+        blogActual.classList.add('mostrar-blog');
+    });
 }
 
 function cambiarBlog() {
