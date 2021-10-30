@@ -51,7 +51,7 @@
                     <div class="full">
                         <div class="center-desk">
                             <div class="logo">
-                                <a href="index.html"><img src="images/inedito fondo.jpg" alt="#"></a>
+                                <a href="index.html"><img src="images/inedito fondo.jpg" alt="Logo Inedito"></a>
                             </div>
                         </div>
                     </div>
@@ -66,25 +66,7 @@
                                     <nav class="main-menu">
                                         <ul class="menu-area-main">
                                             <li class="active"> <a href="index.html">Inicio</a> </li>
-                                            <li> <a href="#about">Testimonio Eduardo</a> </li>
-                                            <li> <a href="#masTemas">Temas</a> </li>
-                                            <li><a href="#testimonial">Testimonios</a></li>
-                                            <li>
-                                                <div class="dropdown show">
-                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                                        id="dropdownMenuLink" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                        Blog
-                                                    </a>
-
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <a class="dropdown-item" href="blog.php">Notas</a>
-                                                        <a class="dropdown-item" href="multimedia.php">Multimedia</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li><a href="#contact">Contacto</a></li>
-
+                                            <li> <a href="multimedia.php">Multimedia</a> </li>
                                         </ul>
                                     </nav>
                                 </div>

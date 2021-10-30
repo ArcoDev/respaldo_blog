@@ -6,10 +6,10 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function mostrarBlog() {
-    const blogAnterior = document.querySelector('.mostrar-blog');
-    if (blogAnterior) {
-        blogAnterior.classList.remove('mostrar-blog');
-    }
+    const blogAnterior = document.querySelectorAll('.mostrar-blog');
+    blogAnterior.forEach(blogAnt => {
+        blogAnt.classList.remove('mostrar-blog');
+    });
     claseBlog();
 
     const enlaceAnterior = document.querySelector('.active');
