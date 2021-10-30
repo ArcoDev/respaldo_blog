@@ -216,14 +216,14 @@ ul.social_icon {display: none !important;}
 
 @media (max-width: 575px) {
  .location_icon_bottum::before {display: none;}
-    .location_icon_bottum {width: 91% !important;
-
-margin-left: 13px;
-
-background: transparent;
-
+    .location_icon_bottum {
+width: 91% !important;
+margin-left: 13px;
+px; */
+background: transparent;
+/* position: absolute; */
 }
-    .mean-container .mean-bar {margin-bottom: -1px;}
+    .mean-container .mean-bar {margin-bottom: -1px;/* position: absolu;/* top: 0; */op: 0;}
    .ggg {display: none;}
     .header { padding-bottom: 0; padding-top: 30px;}
     .last {display: none;}

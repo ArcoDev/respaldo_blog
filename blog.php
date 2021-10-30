@@ -126,14 +126,16 @@
             <?php 
                 try {
                     // Consulta sql 
-                    $sql = "SELECT * FROM blog";
+                    $sql = "SELECT id, id_cat, img_autor, autor, titulo, contenido, img_blog, DATE_FORMAT(fecha, '%d-%m-%Y') as fecha FROM blog bl 
+                          INNER JOIN categorias cat
+                          ON bl.categoria = cat.id_cat";
                     $res = $con->query($sql);
                 } catch (\Throwable $th) {
                     $error = $e->getMessage();
                       echo $error;
                 }
                 while ($blog = $res->fetch_assoc()) {?>
-                    <div class="box-blog numero-<?= $blog['categoria']; ?>">
+                    <div class="box-blog numero-<?= $blog['id_cat']; ?>">
                         <img loading="lazy" src="images/blog/<?= $blog['img_blog'] ?>" alt="Test">
                         <h2 class="mt-3"><?= $blog['titulo'] ?></h2>
                         <button rel="norefeer" data-toggle="modal" data-target="#<?= $blog['id']?>">Leer Más</button>
@@ -160,7 +162,7 @@
                                 <img loading ="lazy" src="images/autor/<?= $blog['img_autor']?>" alt="">
                                 <div class="text-autor">
                                     <span>Por: <?= $blog['autor']?></span>
-                                    <span><b><?= $blog['fecha']?></b></span>
+                                    <span><i class="fa fa-calendar-check-o" aria-hidden="true"></i><b> <?= $blog['fecha']?></b></span>
                                 </div>
                             </div>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span

@@ -63,8 +63,6 @@ $(document).ready(function () {
         }).then(function (result) {
             console.log(result);
             if (result.value) {
-                console.log("ID:" + id);
-
                 $.ajax({
                     type: 'post',
                     data: {
@@ -74,9 +72,7 @@ $(document).ready(function () {
 
                     url: 'modelo-' + blog + '.php',
                     success: function (data) {
-                        console.log(data);
                         var resultado = JSON.parse(data);
-                        console.log(resultado);
                         if (resultado.respuesta == 'exito') {
                             swal(
                                 'Eliminado!',
