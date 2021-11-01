@@ -9,11 +9,6 @@
 <!-- ./wrapper -->
 <!-- jQuery 3 -->
 <script src="js/jquery.min.js"></script>
-<!-- js personales -->
-<script src="js/usuarios-ajax.js"></script>
-<script src="js/blog-ajax.js"></script>
-<script src="js/multimedia-ajax.js"></script>
-<script src="js/categorias-ajax.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="js/bootstrap.min.js"></script>
 <!-- DataTables -->

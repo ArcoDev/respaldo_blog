@@ -61,6 +61,9 @@
 </div>
 <!-- /.content-wrapper -->
 
+<script src="js/jquery.min.js"></script>
+<script src="js/categorias-ajax.js"></script>
+
 <?php
 /* Agregando los templates de la plantilla */
   include_once "templates/footer.php";

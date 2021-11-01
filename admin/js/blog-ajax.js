@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    /* Crear un usuario y mandar info a la BD */
     $('#guardar-blog-archivo').on('submit', function (e) {
         e.preventDefault();
 
@@ -18,7 +17,6 @@ $(document).ready(function () {
                 $('#loader').show();
             },
             success: function (data) {
-                //console.log(data);
                 var resultado = data;
                 if (resultado.respuesta === 'exito') {
                     swal(
@@ -61,7 +59,6 @@ $(document).ready(function () {
             cancelButtonText: 'Cancelar'
 
         }).then(function (result) {
-            console.log(result);
             if (result.value) {
                 $.ajax({
                     type: 'post',
@@ -69,14 +66,13 @@ $(document).ready(function () {
                         'id': id,
                         'registro': 'eliminar'
                     },
-
                     url: 'modelo-' + blog + '.php',
                     success: function (data) {
                         var resultado = JSON.parse(data);
                         if (resultado.respuesta == 'exito') {
                             swal(
                                 'Eliminado!',
-                                'Blog eliminado',
+                                'Registro eliminado',
                                 'success'
                             );
                             jQuery("[data-id='" + resultado.id_eliminado + "'").parents('tr').remove();

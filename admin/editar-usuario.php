@@ -69,7 +69,8 @@
   </div>
 </div>
 <!-- /.content-wrapper -->
-
+<script src="js/jquery.min.js"></script>
+<script src="js/usuarios-ajax.js"></script>
 <?php
 /* AGregado los tempaltes de la plantilla */
   include_once "templates/footer.php";

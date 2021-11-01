@@ -1,5 +1,5 @@
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregabdo los templates de la plantilla */
   include_once "functions/sesiones.php";
   include_once "functions/funciones.php";
   include_once "templates/header.php";
@@ -41,7 +41,6 @@
 <!-- /.content-wrapper -->
 
 <?php
-/* AGregado los tempaltes de la plantilla */
+/* Agregabdo los templates de la plantilla */
   include_once "templates/footer.php";
-
 ?>

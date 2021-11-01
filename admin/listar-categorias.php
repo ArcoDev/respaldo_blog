@@ -24,7 +24,6 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <!--<h3 class="box-title">Maneja los usuarios en esta seccion</h3>-->
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -79,6 +78,9 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/categorias-ajax.js"></script>
 
 <?php
 /* Agregando los templates de la plantilla */

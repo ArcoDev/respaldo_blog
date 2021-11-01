@@ -31,7 +31,7 @@ if($_POST['registro'] == 'nuevo') {
     die(json_encode($respuesta));
 }
 
-/*Actualizar Registro de proyecto */
+/*Actualizar Registro */
 if($_POST['registro'] == 'actualizar') {
      //Consulta SQL
      try {
@@ -58,7 +58,7 @@ if($_POST['registro'] == 'actualizar') {
      die(json_encode($respuesta));
  }
 
-/* Eliminar Proyecto */
+/* Eliminar */
  if($_POST['registro'] == 'eliminar') { 
      $id_borrar = $_POST['id_cat'];
      try {
