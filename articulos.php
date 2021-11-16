@@ -72,12 +72,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                            <form class="search">
-                                <input class="form-control" type="text" placeholder="Search">
-                                <button><img src="images/search_icon.png"></button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -108,16 +102,19 @@
             <?php 
                 try {
                     // Consulta sql 
-                    $sql = "SELECT id, id_cat, img_autor, autor, titulo, contenido, img_blog, DATE_FORMAT(fecha, '%d-%m-%Y') as fecha FROM blog bl 
-                          INNER JOIN categorias cat
-                          ON bl.categoria = cat.id_cat";
+                    $sql = "SELECT id, id_cat, img_autor, autor, titulo, contenido, img_blog, 
+                            DATE_FORMAT(fecha, '%d-%m-%Y') 
+                            as fecha 
+                            FROM blog bl 
+                            INNER JOIN categorias cat
+                            ON bl.categoria = cat.id_cat";
                     $res = $con->query($sql);
                 } catch (\Throwable $th) {
                     $error = $e->getMessage();
                       echo $error;
                 }
                 while ($blog = $res->fetch_assoc()) {?>
-                    <div class="box-blog numero-<?= $blog['id_cat']; ?>">
+                    <div id="blogCat" class="box-blog numero-<?= $blog['id']; ?>" data-categoria="<?= $blog['id_cat']; ?>">
                         <img loading="lazy" src="images/blog/<?= $blog['img_blog'] ?>" alt="Test">
                         <h2 class="mt-3"><?= $blog['titulo'] ?></h2>
                         <button rel="norefeer" data-toggle="modal" data-target="#<?= $blog['id']?>">Leer Más</button>
@@ -136,21 +133,21 @@
         }
         while ($blog = $res->fetch_assoc()) {?>
             <!-- Modal Blog -->
-            <div class="modal fade" id="<?= $blog['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
+            <div class="modal fade modal-blog" id="<?= $blog['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-dialog-blog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header modal-header-blog">
                             <div class="autor">
                                 <img loading ="lazy" src="images/autor/<?= $blog['img_autor']?>" alt="">
                                 <div class="text-autor">
-                                    <span>Por: <?= $blog['autor']?></span>
+                                    <span>Por: <?= $blog['autor']?></span><br>
                                     <span><i class="fa fa-calendar-check-o" aria-hidden="true"></i><b> <?= $blog['fecha']?></b></span>
                                 </div>
                             </div>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body modal-body-blog">
                             <img src="images/blog/<?= $blog['img_blog']?>" alt="">
                             <div class="content-blog">
                                 <h2 class="text-center"><?= $blog['titulo']?></h2>

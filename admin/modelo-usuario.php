@@ -110,22 +110,10 @@ if(isset($_POST["login-usuario"])) {
         if($stmt->affected_rows) {
              $existe = $stmt->fetch();
             if($existe) {
-                /*if(password_verify($contrasenaUsr, $contrasena_usr)){
-                    $respuesta = array(
-                        'respuesta' => 'exitoso',
-                        'usuario' => $nombre_usr
-                            
-                    );
-                } else {
-                    $respuesta = array(
-                        'respuesta' => 'fallo'
-                    );
-                }
-                checar video  753 y 754
-                 */
                 session_start();
                 $_SESSION['usuario'] =  $correo_usr;
                 $_SESSION['nombre'] = $nombre_usr;
+                $_SESSION['contrasena'] = $contrasena_usr;
                 $respuesta = array(
                     'respuesta' => 'si_existe',
                     'usuario' => $nombre_usr

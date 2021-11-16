@@ -1,4 +1,5 @@
-let blog = 1;
+const newValBlog = document.getElementById('blogCat');
+let blog = newValBlog.dataset.categoria;
 
 window.addEventListener('DOMContentLoaded', function () {
     mostrarBlog();
@@ -6,29 +7,34 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function mostrarBlog() {
+    
     const blogAnterior = document.querySelectorAll('.mostrar-blog');
     blogAnterior.forEach(blogAnt => {
         blogAnt.classList.remove('mostrar-blog');
     });
+    
     claseBlog();
-
+    
+    //Remover clase de enlace activo
     const enlaceAnterior = document.querySelector('.active');
     if (enlaceAnterior) {
         enlaceAnterior.classList.remove('active');
     }
+    
+    //Agregar clase active a enlace actual
     const enlaceActual = document.querySelector(`[data-blog="${blog}"]`);
     enlaceActual.classList.add('active');
 }
 
 function claseBlog() {
-    const claseB = document.querySelectorAll(`.numero-${blog}`);
+    const claseB = document.querySelectorAll(`[data-categoria="${blog}"]`);
     claseB.forEach(blogActual => {
         blogActual.classList.add('mostrar-blog');
     });
 }
 
 function cambiarBlog() {
-    const enlaces = document.querySelectorAll('a');
+    const enlaces = document.querySelectorAll('a.enlaces');
     enlaces.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();

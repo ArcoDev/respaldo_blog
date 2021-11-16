@@ -8,7 +8,7 @@
 
         <header class="main-header">
             <!-- Logo -->
-            <a href="../blog.php" target="_blank" class="logo">
+            <a href="../articulos.php" target="_blank" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>I</b>N</span>
                 <!-- logo for regular state and mobile devices -->

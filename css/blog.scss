@@ -84,7 +84,9 @@ $tabletH: 1024px;
         &.mostrar-blog {
             display: grid;
         }
-
+        &.multimedia {
+            display: block;
+        }
         @include mobile {
             width: 100%;
         }
@@ -139,12 +141,12 @@ $tabletH: 1024px;
 
 // Modal 
 @include mobile {
-    .modal {
+    .modal-blog {
         padding-right: 0 !important;
     }
 }
 
-.modal-dialog {
+.modal-dialog-blog {
     max-width: 1200px;
 
     @include tablet {
@@ -152,7 +154,7 @@ $tabletH: 1024px;
     }
 }
 
-.modal-header {
+.modal-header-blog {
     img {
         width: 70px;
         height: 70px;
@@ -163,11 +165,11 @@ $tabletH: 1024px;
 }
 
 .text-autor {
-    width: 140%;
+    width: 200%;
     padding-top: 0.7rem;
 }
 
-.modal-body {
+.modal-body-blog {
     display: flex;
     gap: 2rem;
 

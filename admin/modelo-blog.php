@@ -4,6 +4,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 include_once "functions/funciones.php";
 $autor = $_POST['autor'];
 $url_autor = $_POST['autor_imagen'];
+$fecha = $_POST['fecha'];
 $titulo = $_POST['titulo'];
 $contenido = $_POST['contenido'];
 $blog_cat = $_POST['blog_cat'];
@@ -49,8 +50,7 @@ if($_POST['registro'] == 'nuevo') {
         include_once "functions/funciones.php";
         $stmt = $con->prepare("INSERT INTO blog (autor, img_autor, fecha, titulo, contenido, categoria, img_blog)
                                VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $date= date("d/m/y");
-        $stmt->bind_param("sssssis", $autor, $imagen_autor, $date, $titulo, $contenido, $blog_cat, $imagen_blog);
+        $stmt->bind_param("sssssis", $autor, $imagen_autor, $fecha, $titulo, $contenido, $blog_cat, $imagen_blog);
         $stmt->execute();
         $id_insertado = $stmt->insert_id;
         if ($stmt->affected_rows){
@@ -115,13 +115,12 @@ if($_POST['registro'] == 'actualizar') {
          if($_FILES['autor_imagen']['size'] > 0 and $_FILES['blog_imagen']['size'] > 0) {
              //Edicion con imagenes
              $stmt = $con->prepare("UPDATE blog SET autor = ?, img_autor = ?, fecha = ?, titulo = ?, contenido = ?, categoria = ?, img_blog = ? WHERE  id = ?");
-             $date= date("d/m/y");
-             $stmt->bind_param("sssssisi", $autor, $imagen_autor, $date, $titulo, $contenido, $blog_cat, $imagen_blog, $id_registroEditar);
+             $stmt->bind_param("sssssisi", $autor, $imagen_autor, $fecha, $titulo, $contenido, $blog_cat, $imagen_blog, $id_registroEditar);
          } else {
              //Edicion sin imagenes
              $stmt = $con->prepare("UPDATE blog SET autor = ?, fecha = ?, titulo = ?, contenido = ?, categoria = ? WHERE id = ?");
              $date= date("d/m/y");
-             $stmt->bind_param("ssssii", $autor, $date, $titulo, $contenido, $blog_cat, $id_registroEditar);
+             $stmt->bind_param("ssssii", $autor, $fecha, $titulo, $contenido, $blog_cat, $id_registroEditar);
          }
          $estado = $stmt->execute();
          if($estado == true) {

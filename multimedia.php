@@ -66,17 +66,11 @@
                                     <nav class="main-menu">
                                         <ul class="menu-area-main">
                                             <li class="active"> <a href="index.html">Inicio</a> </li>
-                                            <li> <a href="blog.php">Blog</a></li>
+                                            <li> <a href="articulos.php">Artículo</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                            <form class="search">
-                                <input class="form-control" type="text" placeholder="Search">
-                                <button><img src="images/search_icon.png"></button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -100,7 +94,7 @@
                       echo $error;
                 }
                 while ($multimedia = $res->fetch_assoc()) {?>
-                    <div class="box-blog">
+                    <div class="box-blog multimedia">
                         <iframe src="<?= $multimedia['url']?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>

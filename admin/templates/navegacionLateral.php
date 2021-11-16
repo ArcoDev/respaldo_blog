@@ -29,19 +29,6 @@
       </li>
       <li class="treeview">
         <a href="#">
-          <i class="fab fa-hive"></i>
-          <span> Blog</span>
-          <span class="pull-right-container">
-            <i class="fas fa-angle-down"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="listar-blog.php"><i class="fas fa-th-list" style="margin-right: 8px"></i>Ver Todos</a></li>
-          <li><a href="crear-blog.php"><i class="fas fa-plus-circle" style="margin-right: 8px"></i>Agregar</a></li>
-        </ul>
-      </li>
-      <li class="treeview">
-        <a href="#">
           <i class="fas fa-clipboard-list""></i>
           <span> Categorias</span>
           <span class="pull-right-container">
@@ -51,6 +38,19 @@
         <ul class="treeview-menu">
           <li><a href="listar-categorias.php"><i class="fas fa-th-list" style="margin-right: 8px"></i>Ver Todas</a></li>
           <li><a href="crear-categorias.php"><i class="fas fa-plus-circle" style="margin-right: 8px"></i>Agregar</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fab fa-hive"></i>
+          <span> Blog</span>
+          <span class="pull-right-container">
+            <i class="fas fa-angle-down"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="listar-blog.php"><i class="fas fa-th-list" style="margin-right: 8px"></i>Ver Todos</a></li>
+          <li><a href="crear-blog.php"><i class="fas fa-plus-circle" style="margin-right: 8px"></i>Agregar</a></li>
         </ul>
       </li>
       <li class="treeview">

@@ -58,7 +58,7 @@
                 </div>
                 <div class="form-group">
                   <label for="fecha">Fecha de creación</label>
-                  <input type="date" class="form-control" id="fecha" name="fecha">
+                  <input type="date" class="form-control" id="fecha" name="fecha" value="<?= $blog['fecha'] ?>">
                 </div>
                 <div class="form-group">
                   <label for="titulo">Titulo del blog</label>
@@ -74,13 +74,13 @@
                 <div class="form-group">
                   <label for="precio">Categoría</label>
                   <?php
-                  try {
-                    $consulta = "SELECT * FROM categorias";
-                    $resultado = $con->query($consulta);
-                  } catch (Exception $e) {
-                    $error = $e->getMessage();
-                    echo $error;
-                  }?>
+                    try {
+                      $consulta = "SELECT * FROM categorias";
+                      $resultado = $con->query($consulta);
+                    } catch (Exception $e) {
+                      $error = $e->getMessage();
+                      echo $error;
+                    }?>
                   <select name="blog_cat" class="form-control">
                     <option>Selecciona la categoría a la que pertenecera el proyecto</option>
                     <?php while($infoSelect = mysqli_fetch_array($resultado)) { 

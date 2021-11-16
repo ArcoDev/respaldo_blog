@@ -82,6 +82,10 @@ body {
   display: grid;
 }
 
+.container-blog .box-blog.multimedia {
+  display: block;
+}
+
 @media screen and (max-width: 767px) {
   .container-blog .box-blog {
     width: 100%;
@@ -138,22 +142,22 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .modal {
+  .modal-blog {
     padding-right: 0 !important;
   }
 }
 
-.modal-dialog {
+.modal-dialog-blog {
   max-width: 1200px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .modal-dialog {
+  .modal-dialog-blog {
     max-width: 700px;
   }
 }
 
-.modal-header img {
+.modal-header-blog img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -162,11 +166,11 @@ body {
 }
 
 .text-autor {
-  width: 140%;
+  width: 200%;
   padding-top: 0.7rem;
 }
 
-.modal-body {
+.modal-body-blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,7 +178,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .modal-body {
+  .modal-body-blog {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -183,7 +187,7 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .modal-body {
+  .modal-body-blog {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -191,27 +195,27 @@ body {
   }
 }
 
-.modal-body img {
+.modal-body-blog img {
   width: 500px;
   height: 400px;
   padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 767px) {
-  .modal-body img {
+  .modal-body-blog img {
     width: 100%;
     height: auto;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .modal-body img {
+  .modal-body-blog img {
     width: 100%;
     height: auto;
   }
 }
 
-.modal-body p {
+.modal-body-blog p {
   color: #4c4a49;
   text-align: justify;
 }

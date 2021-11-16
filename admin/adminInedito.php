@@ -8,6 +8,20 @@
   
 ?>
 
+<style>
+  .img-inedito {
+    width: 500px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .img-inedito {
+      width: 250px;
+      height: 250px;
+    }
+  }
+</style>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -26,10 +40,10 @@
         <h3 class="box-title">Administración del blog y multimedia del sitio web inédito</h3>
       </div>
       <center>
-      <img src="../images/inedito fondo.jpg" alt="Logo amora" width="500" heigth="500">
-      <div class="box-body">
-        En el menú lateral, tienes las diferentes opciones para administrar el sitio web.
-      </div>
+        <img class="img-inedito" src="../images/inedito fondo.jpg" alt="Logo Inedito">
+        <div class="box-body">
+          En el menú lateral, tienes las diferentes opciones para administrar el sitio web.
+        </div>
       </center>
       <!-- /.box-body -->
     </div>
